@@ -1,0 +1,238 @@
+.circle__box {
+    width: 200px;
+    height: 200px;
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: rgba(70, 67, 67);
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s ease;
+    overflow: hidden;
+
+}
+
+.button:hover {
+    background-color: rgb(204, 61, 140);
+}
+
+.button:hover .bar1 {
+    background-color: white;
+    /* transform: translateY(-60px); */
+    /* transform: translateY(35px) rotate(45deg); */
+    animation: bar1animate 1s ease;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .bar3 {
+    background-color: white;
+    /* transform: translateY(-35px) rotate(-45deg); */
+    animation: bar3animate 1s ease;
+    animation-fill-mode: forwards;
+}
+
+.button:hover .bar2 {
+    background-color: white;
+    animation: moveout 1s ease;
+    animation-fill-mode: forwards;
+
+}
+.bar2{
+    /* transform: translateX(500px); */
+    animation: movein 1s ease ;
+
+}
+.circle__wrapper {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circle__wrapper--right {
+    right: 0;
+    z-index: 1;
+}
+
+.circle__wrapper--left {
+    left: 0;
+    z-index: 1;
+}
+
+.circle__whole {
+    width: 160px;
+    height: 160px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    transform: rotate(-135deg);
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    position: relative;
+    top: -10px;
+    background-color: rgb(204, 61, 140);
+    width: 120px;
+    height: 5px;
+    margin: 30px;
+    /* transition: 1s ease; */
+    z-index: 2;
+    /* transform-origin: left; */
+
+}
+.bar1{
+    animation: bar1animateout 0.5s ease;
+}
+.bar3{
+    animation: bar3animateout 0.5s ease;
+}
+/* .bar1, .bar3{
+    transition-delay: 1s;
+} */
+
+.circle__right {
+    border-top: 5px solid white;
+    border-right: 5px solid white;
+    right: 15.5px;
+
+}
+
+.button:hover .circle__right {
+    animation: circleRight 1s linear forwards;
+}
+
+.button:hover .circle__left {
+    animation: circleLeft 1s linear forwards;
+}
+
+.circle__left {
+    border-bottom: 5px solid white;
+    border-left: 5px solid white;
+    left: 15.5px;
+}
+
+@keyframes circleRight {
+    0% {
+        transform: rotate(-135deg);
+    }
+
+    50%,
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes circleLeft {
+
+    0%,
+    50% {
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(45deg);
+    }
+}
+
+@keyframes moveout {
+    0% {
+        transform: translateX(0px);
+    }
+
+    80% {
+        transform: translateX(-30px);
+    }
+
+    100% {
+        transform: translateX(500px);
+    }
+}
+@keyframes movein {
+    0% {
+        transform: translateX(500px);
+    }
+
+    50% {
+        transform: translateX(-40px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes bar3animate {
+    0% {
+        transform: translateX(0px);
+    }
+
+    70% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px) translateY(-35px) rotate(-45deg);
+
+    }
+}
+@keyframes bar1animate {
+    0% {
+        transform: translateX(0px);
+    }
+
+    70% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0px)  translateY(35px) rotate(45deg);
+
+    }
+}
+@keyframes bar1animateout {
+    0% {
+        transform: translateX(0px)  translateY(35px) rotate(45deg);
+    }
+
+    70% {
+        transform: translateX(-10px) rotate(0deg) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(0px) ;
+
+    }
+}
+@keyframes bar3animateout {
+    0% {
+        transform: translateX(0px)  translateY(-35px) rotate(-45deg);
+    }
+
+    70% {
+        transform: translateX(-10px) rotate(0deg) translateY(0px);
+    }
+
+    100% {
+        transform: translateX(0px) ;
+
+    }
+}
