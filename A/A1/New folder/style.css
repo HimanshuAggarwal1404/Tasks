@@ -1,0 +1,202 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: green
+}
+
+body {
+    padding: 30px;
+}
+
+.container {
+    height: 130vh;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-row-gap: 25px;
+    grid-column-gap: 2.5vh;
+    position: relative;
+    left: 0px;
+
+}
+
+.emptyprea,
+.emptypreb,
+.emptyprec,
+.emptypree,
+.emptypref,
+.emptypreg,
+.emptypreh,
+.emptyprei,
+.emptyprel,
+.emptyprek {
+    display: none;
+}
+
+.emptyposta,
+.emptypostb,
+.emptypostd,
+.emptyposte,
+.emptypostf,
+.emptypostg,
+.emptyposth,
+.emptypostl,
+.emptypostj,
+.emptypostk {
+    display: none;
+}
+
+.a,
+.b,
+.c,
+.g,
+.h,
+.i {
+    animation: slideright 3s ease infinite;
+
+}
+
+.d,
+.e,
+.f,
+.j,
+.k,
+.l {
+    animation: slideleft 3s ease infinite;
+
+}
+
+.whitebox {
+    background-color: white;
+    display: flex;
+    height: 30vh;
+    margin:10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    font-family: sans-serif;
+}
+
+
+
+@media(max-width:1200px) {
+    html {
+        font-size: 80%;
+    }
+
+    .container {
+        min-height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-row-gap: 25px;
+        grid-column-gap: 2.5vh;
+        position: relative;
+        left: 0px;
+        grid-column-start: auto;
+    
+    }
+
+    .emptyprea,
+    .emptypreb,
+    .emptypred,
+    .emptypree,
+    .emptypref,
+    .emptypreh,
+    .emptyprei,
+    .emptyprej,
+    .emptyprel {
+        display: none;
+    }
+
+    .emptyposta,
+    .emptypostc,
+    .emptypostd,
+    .emptyposte,
+    .emptypostg,
+    .emptyposth,
+    .emptyposti,
+    .emptypostk,
+    .emptypostl {
+        display: none;
+    }
+
+    .emptypostb {
+        display: flex;
+    }
+
+    .emptypostf {
+        display: flex;
+    }
+
+    .emptypostj {
+        display: flex;
+    }
+
+    .emptyprec {
+        display: flex;
+    }
+
+    .emptypreg {
+        display: flex;
+    }
+
+    .emptyprek {
+        display: flex;
+    }
+
+
+    .a,
+    .b,
+    .e,
+    .f,
+    .i,
+    .j {
+        animation: slideright 3s ease infinite;
+
+    }
+
+    .c,
+    .d,
+    .g,
+    .h,
+    .k,
+    .l {
+        animation: slideleft 3s ease infinite;
+
+    }
+
+}
+@keyframes slideright {
+    0% {
+        position: relative;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(24vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes slideleft {
+    0% {
+        transform: translateX(0);
+        position: relative;
+        right: 0;
+    }
+
+    50% {
+        transform: translateX(-24vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}

@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    background-color: green
+}
+
+body {
+    padding: 30px;
+}
+
+.container {
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.whitebox {
+    background-color: white;
+    height: 30vh;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    font-family: sans-serif;
+    transition: all 3s ease;
+}
+
+@media(min-width:1201px){
+    html{
+        font-size: 100%;
+    }
+    .whitebox{
+        width: 23vw;
+    }
+
+    .container div:nth-child(6n+1), .container div:nth-child(6n+2),.container div:nth-child(6n+3) {
+        animation: slideright 3s ease infinite;
+    
+    }
+    
+    .container div:nth-child(6n+4),.container div:nth-child(6n+5),.container div:nth-child(6n+6){
+        animation: slideright 3s ease infinite reverse;
+    
+    }
+    
+}
+@media(max-width:1200px) and (min-width:900px){
+    html{
+        font-size: 85%;
+    }
+    .container{
+        flex-flow: row wrap;
+    }
+    .whitebox{
+        width: 30vw;
+    }
+    .container div:nth-child(4n+1), .container div:nth-child(4n+2) {
+        animation: slideright 3s ease infinite;
+    
+    }
+    .container div:nth-child(4n+3),.container div:nth-child(4n+4){
+        position: relative;
+        right: 0;
+        animation: slideright 3s ease infinite reverse;
+    
+    }
+    
+}
+@media(max-width:900px) and (min-width:200px){
+    html{
+        font-size: 65%;
+    }
+    .container{
+        flex-flow: row wrap;
+    }
+    .whitebox{
+        width: 45vw;
+    }
+    .container div:nth-child(2n) {
+        animation: slideright 3s ease infinite;
+    
+    }
+    .container div:nth-child(2n+1){
+        position: relative;
+        right: 0;
+        animation: slideright 3s ease infinite reverse;
+    
+    }
+    
+}
+
+@keyframes slideright {
+    0% {
+
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(5vw);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    66%{
+        transform: translateX(-5vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}
+

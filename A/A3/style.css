@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.box{
+    transition: ease 1s;
+
+}
+.text{
+    font-size: 3.5rem;
+    position: absolute;
+    /* top: 50vh;
+    left: 50vw; */
+    z-index: 1;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+.boxes{
+    z-index: 2;
+    width: 20vw;
+    display:grid;
+    grid-template-columns: auto auto;
+    position: absolute;
+    /* top: 30vh;
+    left: 45vw; */
+    transform-origin:center;
+}
+.box{
+    height: 20vh;
+    width: 10vw;
+}
+.boxes:hover .red{
+    transform: rotate(90deg);
+}
+.boxes:hover .blue{
+    transform: rotate(-90deg);
+}
+.boxes:hover .yellow{
+    transform: rotate(-90deg);
+}
+.boxes:hover .green{
+    transform: rotate(90deg);
+}
+
+/* .boxes:hover .red{
+    transform: rotate(180deg);
+}
+.boxes:hover .red{
+    transform: rotate(180deg);
+} */
+.text{
+    top: 50vh;
+    left: 50vw;
+}
+.boxes{
+    top: 30vh;
+    left: 40vw;
+    
+
+}
+.red{
+    background-color: red;
+    transform-origin: top left;
+
+}
+.yellow{
+    background-color: yellow;
+    transform-origin: bottom left;
+
+}
+.blue{
+    background-color: blue;
+    transform-origin: top right;
+
+}
+.green{
+    background-color: green;
+    transform-origin: bottom right;
+
+}
+@keyframes redrotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(9deg);
+    }
+    20%{
+        transform: rotate(18deg);
+    }
+    30%{
+        transform: rotate(27deg);
+    }
+    40%{
+        transform: rotate(36deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    60%{
+        transform: rotate(54deg);
+    }
+    70%{
+        transform: rotate(63deg);
+    }
+    80%{
+        transform: rotate(72deg);
+    }
+    90%{
+        transform: rotate(81deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+    
+
+}
+@keyframes bluerotate {
+    0%{
+        transform: rotate(-0deg);
+    }
+    10%{
+        transform: rotate(-9deg);
+    }
+    20%{
+        transform: rotate(-18deg);
+    }
+    30%{
+        transform: rotate(-27deg);
+    }
+    40%{
+        transform: rotate(-36deg);
+    }
+    50%{
+        transform: rotate(-45deg);
+    }
+    60%{
+        transform: rotate(-54deg);
+    }
+    70%{
+        transform: rotate(-63deg);
+    }
+    80%{
+        transform: rotate(-72deg);
+    }
+    90%{
+        transform: rotate(-81deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+    
+}
