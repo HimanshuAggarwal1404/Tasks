@@ -1,0 +1,67 @@
+.button {
+    background-color: rgba(70, 67, 67);
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s ease;
+    overflow: hidden;
+
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    background-color: rgb(204, 61, 140);
+    width: 250px;
+    height: 5px;
+    margin: 30px;
+    transition: 0.5s ease;
+    /* transform-origin: left; */
+
+}
+
+.bar4 {
+    /* background-color: rgb(204,61,140); */
+    background-color: rgba(70, 67, 67);
+    height: 350px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgba(70, 67, 67);
+    border-radius: 300px;
+    transition: 1s ease;
+}
+
+.button:hover .bar4 {
+    border: 2px solid white;
+    background-color: rgb(204, 61, 140);
+
+}
+
+.button:hover {
+    background-color: rgb(204, 61, 140);
+}
+.button:hover .bar1 {
+    background-color: white;
+    /* transform: translateY(-60px); */
+
+    transform: translateY(60px) rotate(45deg);
+}
+.button:hover .bar3 {
+    background-color: white;
+    transform: translateY(-60px) rotate(-45deg);
+}
+.button:hover .bar2 {
+    background-color: rgba(70, 67, 67);
+    transform: translateX(500px);
+
+}
+
